@@ -1,5 +1,7 @@
 package com.sahil.api.entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -21,11 +23,13 @@ public class Users {
             name = "uuid",
             strategy = "org.hibernate.id.UUIDGenerator"
     )
+    
     private String id;
     private String name;
     private String username;
     private String email;
     private String phone;
     private String password;
-
+    private Date createdAt;
+    private Date updatedAt;
 }
